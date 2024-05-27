@@ -11,7 +11,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'Cocktails',
-    description: 'Cocktails des soirées de Gaby'
+    description: 'Cocktails des soirées de Gaby',
+    openGraph: {
+        title: 'Cocktails',
+        description: 'Cocktails des soirées de Gaby',
+        images: [
+            {
+                url: 'https://cocktails.ganarok.com/cocktails/white-russian.jpg',
+                width: 1080,
+                height: 1440,
+                alt: 'Cocktail'
+            }
+        ]
+    }
 }
 
 export default function RootLayout({
