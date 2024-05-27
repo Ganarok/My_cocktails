@@ -1,0 +1,44 @@
+FROM node:21-bullseye-slim
+
+# # create destination directory
+WORKDIR /usr/src/app
+
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+COPY package*.json ./
+
+# Set environment variables & args for deployment
+ENV NEXT_TELEMETRY_DISABLED=1
+ARG ENV=production
+ENV ENV=${ENV}
+ARG PORT=3000
+ENV PORT=${PORT}
+ARG BACK_HOST
+ENV BACK_HOST=${BACK_HOST}
+ARG FRONT_HOST
+ENV FRONT_HOST=${FRONT_HOST}
+ARG ENCRYPTION_KEY
+ENV ENCRYPTION_KEY=${ENCRYPTION_KEY}
+ARG AUTH_SECRET
+ENV AUTH_SECRET=${AUTH_SECRET}
+ARG APE_BACK_HOST
+ENV APE_BACK_HOST=${APE_BACK_HOST}
+
+# Install app dependencies
+RUN npm install
+
+# Bundle app source
+COPY postcss.config.js ./
+COPY next.config.mjs ./
+COPY tsconfig.json ./
+COPY tailwind.config.ts ./
+
+COPY src ./src
+COPY public ./public
+
+# Expose the port the app runs on
+EXPOSE ${PORT}:${PORT}
+
+# Build the app
+RUN npm run build
+
+CMD [ "npm", "run", "start" ]
