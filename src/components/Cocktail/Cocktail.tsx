@@ -24,7 +24,7 @@ export default function Cocktail({
     footer
 }: CocktailProps) {
     return (
-        <Card className="relative">
+        <Card className="relative sm:max-w-2xl">
             <div className="absolute top-0 left-0 w-12 h-12 opacity-80">
                 <Image
                     alt="Image cocktail"

@@ -29,5 +29,15 @@ export const cocktails: Cocktail[] = [
             'https://assets-global.website-files.com/603e7f3219462c686bd2bb29/606c5e0d8bb385f1016fd0f2_gin-basil-smash-main.jpeg'
         ],
         footer: "Je connais moins celui-ci j'avais trop envie de le tester. Je peux faire une version sans alcool, juste avec jus de citron vert et basilic."
+    },
+    {
+        name: 'Mojito',
+        description:
+            'Un cocktail à base de rhum, citron vert, menthe, sucre et eau gazeuse.',
+        images: [
+            'https://www.destinationcocktails.fr/wp-content/uploads/2019/11/Cocktail-mojito-1.jpg',
+            'https://mesdelicieusescreations.com/wp-content/uploads/2022/07/mojito-3-saveurs.jpg'
+        ],
+        footer: 'Variante possible avec de la crème de framboise, ou avec de la vodka à la place du rhum'
     }
 ]
