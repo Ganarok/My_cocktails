@@ -61,5 +61,16 @@ export const cocktails: Cocktail[] = [
             'https://cf.ltkcdn.net/cocktails/images/orig/269828-2127x1409-blue-corasao.jpg'
         ],
         footer: 'On peut également rajouter un peu de sirop de sucre pour adoucir le tout.'
+    },
+    {
+        name: 'Cosmopolitan',
+        description:
+            'Un cocktail à base de vodka, triple sec, jus de cranberry et jus de citron vert.',
+        images: [
+            'https://images.squarespace-cdn.com/content/v1/635b4f0db569655c1d0994bf/acbd2087-a9a9-4a58-bf19-039317577b57/The+Perfect+Classic+Cosmopolitan+Cocktail+Recipe.png',
+            'https://laboiteacocktails.fr//wp-content/uploads/2019/06/cosmopolitan-cocktail-cranberry.jpg',
+            'https://creative-culinary.com/wp-content/uploads/cosmopolitan2.jpg'
+        ],
+        footer: "Y a des bars qui rajoutent un poil de jus/crème d'un fruit. Pour le coup j'ai de la crème de framboise"
     }
 ]
